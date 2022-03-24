@@ -1,6 +1,6 @@
-# Hello Rails App
+# Blog App
 
-> The app is an initialization of my first rail project where I create a new rails projects and all the dependencies required. I then link it to postgresql database and create a new database for the app. The app displays the text "Hello World" in the hello.html page and has its default route set to this page.
+> The blog app is a fully functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
 
 ## Project screenshots
 
@@ -15,7 +15,7 @@ Additional description about the project and its features.
 
 ## How to Setup
 
-> You can simply clone or download [this repository](https://github.com/Mosams/hellorails.git), and use your favorite browser or code editor to run this program.
+> You can simply clone or download [this repository](https://github.com/Mosams/Blog_App.git), and use your favorite browser or code editor to run this program.
 
 - To open the project after download, simply double click the index.html file
 
@@ -23,7 +23,7 @@ Additional description about the project and its features.
   > in your cmd or command line navigate to where this project is located, then;
 
 ```cmd
-cd hellorails
+cd Blog_App
 ```
 
 > thereafter run
@@ -38,7 +38,7 @@ code .
   > in your cmd or command line navigate to where this project is located, then;
 
 ```cmd
-cd hellorails
+cd Blog_App
 ```
 
 ## Install Gems

@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  resources :users, shallow: true do
-    resources :posts
+  resources :users, only: %i[index show] do
+    resources :posts, only: %i[index show] 
   end  
-
-  root 'home#index'
+  root 'users#index'
 end

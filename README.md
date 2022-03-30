@@ -47,6 +47,14 @@ cd Blog_App
 ```cmd
 bundle install
 ```
+> then initialize the database
+
+```cmd
+rails db:create
+```
+```cmd
+rails db:migrate
+```
 > thereafter run
 
 ```cmd

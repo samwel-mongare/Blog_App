@@ -1,9 +1,3 @@
-<ul>
-    <% @users.each do |user| %>
-    <li>
-      <img src="<%= user.photo %>" alt= "User Photo">
-      <h2><%= user.name %></h2>
-      <p> Number of posts: <%= !user.posts_counter ? 0 :  user.posts_counter %>
-    </li>
-  <% end %>
-</ul>
+<div>
+  <%= render 'share/user' %>
+</div>

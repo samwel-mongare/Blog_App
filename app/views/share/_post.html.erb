@@ -1,0 +1,17 @@
+<ul class= "list-unstyled align-items-center d-flex flex-column align-items-center w-75">
+    <li class="card mb-3 w-75 mt-4" >
+      <div class="col-md-12">
+      <div class="card-body">
+      <h4 class="card-title">Post #<%= post.id %></h4><br>
+      <h3 class="card-title"><%= post.title %></h3>
+      <p class="card-text" ><%= post.text %></p>
+       <p class="card-text text-end">
+        <small class="text-muted">
+          comments: <%= !post.comments_counter ? 0 :  post.comments_counter %>,
+          likes: <%= !post.likes_counter ? 0 :  post.likes_counter %>
+        </small>
+      </p>
+      </div>
+      </div>
+    </li>
+</ul>

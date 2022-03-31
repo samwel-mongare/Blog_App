@@ -1,3 +1,5 @@
 <div>
-  <%= render 'share/user' %>
+<% @users.each do |u| %>
+  <%= render 'share/user', :user => u %>
+<% end %>
 </div>

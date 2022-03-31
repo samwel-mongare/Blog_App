@@ -9,7 +9,7 @@
       </div>
     </li>
 </ul>
-<% @posts = Post.all %>
+<% @posts = @user.latest_posts %>
 <% if !@posts %>
   <h4 class="card-title">There are no posts from this user yet<h4>
 <% else %>

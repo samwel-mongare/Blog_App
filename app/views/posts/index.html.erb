@@ -2,12 +2,12 @@
 <%  @user = User.find(params[:user_id]) %>
   <%= render 'share/user', :user => @user %>
 <% @posts = Post.all %>
-<% @comments = Comment.all %>
 <% @users = User.all %>
 <% if !@posts %>
   <h4 class="card-title">There are no posts from this user yet<h4>
 <% else %>
 <% @posts.each do |p| %>
+<% @comments = p.latest_posts %>
 <% if p.author_id === @user.id %>
   <%= render 'share/post', :post => p %>
   <%= render 'share/comment', :user => @users, :comment => @comments, :post => p %>

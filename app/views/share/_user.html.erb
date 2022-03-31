@@ -1,0 +1,19 @@
+<ul class= "list-unstyled align-items-center d-flex flex-column align-items-center w-75">
+    <li class="card mb-3 w-75 mt-4" >
+      <div class="row g-0">
+      <div class="col-md-2">
+      <img src="<%= user.photo %>"  class="rounded float-start rounded border img-thumbnail" style="width: 150px" alt= "User Photo">
+      </div>
+      <div class="col-md-10">
+      <div class="card-body">
+      <h2 class="card-title"><%= user.name %></h2>
+       <p class="card-text text-end pt-5">
+        <small class="text-muted">
+          Number of posts: <%= !user.posts_counter ? 0 :  user.posts_counter %>
+        </small>
+      </p>
+      </div>
+      </div>
+      </div>
+    </li>
+</ul>

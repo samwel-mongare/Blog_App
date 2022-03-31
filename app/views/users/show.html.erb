@@ -1,1 +1,22 @@
-<h1>Here is a user with a unique id from a lsit of users show</h1>
+<div>
+  <%= render 'share/user', :user => @user %>
+  <ul class= "list-unstyled align-items-center d-flex flex-column align-items-center w-75">
+    <li class="card mb-3 w-75 mt-4" >
+      <div class="col-md-12">
+      <div class="card-body">
+      <h4 class="card-title">Bio: </h4><br>
+      <p class="card-text"><%= @user.bio %></p>
+      </div>
+    </li>
+</ul>
+<% @posts = @user.latest_posts %>
+<% if !@posts %>
+  <h4 class="card-title">There are no posts from this user yet<h4>
+<% else %>
+<% @posts.each do |p| %>
+<% if p.author_id === @user.id %>
+  <%= render 'share/post', :post => p %>
+<% end %>
+<% end %>
+<% end %>
+</div>

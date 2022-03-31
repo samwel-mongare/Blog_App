@@ -1,1 +1,5 @@
-<h1>Here is a user with a unique id from a list of users index</h1>
+<div>
+<% @users.each do |u| %>
+  <%= render 'share/user', :user => u %>
+<% end %>
+</div>

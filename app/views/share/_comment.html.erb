@@ -1,0 +1,15 @@
+<ul class= "list-unstyled align-items-center d-flex flex-column align-items-center w-75">
+    <li class="card mb-3 w-75" style="margin-top: -2rem" >
+      <div class="col-md-12">
+        <div class="card-body">
+            <% comment.each do |commenting| %>
+            <% user.each do |u| %>
+                <% if commenting.author_id === u.id && commenting.post_id === post.id  %> 
+                    <p class="card-text"><%= u.name %>: <%= commenting.text %></p> 
+                 <% end %>
+            <% end %>
+            <% end %> 
+        </div>
+      </div>
+    </li> 
+</ul>

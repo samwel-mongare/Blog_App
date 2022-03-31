@@ -1,1 +1,17 @@
-<h1>Here is a list of posts for a given user index</h1>
+<div>
+<%  @user = User.find(params[:user_id]) %>
+  <%= render 'share/user', :user => @user %>
+<% @posts = Post.all %>
+<% @users = User.all %>
+<% if !@posts %>
+  <h4 class="card-title">There are no posts from this user yet<h4>
+<% else %>
+<% @posts.each do |p| %>
+<% @comments = p.latest_posts %>
+<% if p.author_id === @user.id %>
+  <%= render 'share/post', :post => p %>
+  <%= render 'share/comment', :user => @users, :comment => @comments, :post => p %>
+<% end %>
+<% end %>
+<% end %>
+</div>

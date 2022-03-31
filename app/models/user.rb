@@ -7,3 +7,10 @@ class User < ApplicationRecord
     posts.limit(3).order(created_at: :desc)
   end
 end
+
+# Test data...I will delete after prject input fields are created
+# first_user = User.create(name: 'Sam', photo: 'https://d2qp0siotla746.cloudfront.net/img/use-cases/profile-picture/template_3.jpg', bio: 'Teacher from Kenya.')
+# second_user = User.create(name: 'Dan', photo: 'https://d2qp0siotla746.cloudfront.net/img/use-cases/profile-picture/template_3.jpg', bio: 'Teacher from Uganda.')
+# third_user = User.create(name: 'Amkam', photo: 'https://d2qp0siotla746.cloudfront.net/img/use-cases/profile-picture/template_3.jpg', bio: 'Teacher from Mexico.')
+# fourth_user = User.create(name: 'Anne', photo: 'https://d2qp0siotla746.cloudfront.net/img/use-cases/profile-picture/template_3.jpg', bio: 'Teacher from England.')
+# fifth_user = User.create(name: 'Naomi', photo: 'https://d2qp0siotla746.cloudfront.net/img/use-cases/profile-picture/template_3.jpg', bio: 'Teacher from Germany.')

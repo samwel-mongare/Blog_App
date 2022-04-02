@@ -1,6 +1,14 @@
-<div>
+  <div>
 <% @comments = Comment.all %>
 <% @users = User.all %>
-  <%= render 'share/post_show', :post => @post, :user => @users %>
-  <%= render 'share/comment', :user => @users, :comment => @comments, :post => @post %>
+  <%= render 'post_show', :post => @post, :user => @users %>
+  <%= render 'comment', :user => @users, :comment => @comments, :post => @post %>
+</div>
+  <div class="list-unstyled col-md-8">
+  <div class="card-body" style = "padding-left: 0; margin-left: 14.5%">
+  <%= render partial: "add_comments", local: { post: @post } %>
+  <%= form_with url: "/users/#{@post.author_id}/posts/#{@post.id}/likes", scope: :like do |form| %>
+    <%= form.submit "Like ", class: "btn btn-primary mt-3"%>  
+  <% end %>
+  </div>
 </div>

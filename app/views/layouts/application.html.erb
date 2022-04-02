@@ -12,6 +12,17 @@
 
   <body class="d-flex flex-column min-vh-100">
     <%= render 'users/header' %>
+
+    <div class="d-flex justify-content-center">
+      <% if flash[:notice] %>
+        <div class="w-25 alert alert-warning alert-dismissible fade show" role="alert">
+          <strong>
+            <%= flash[:notice] %>
+          </strong>
+        </div>
+      <% end %>
+    </div>
+
     <%= yield %>
     <%= render 'users/footer' %>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 

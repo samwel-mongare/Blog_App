@@ -16,6 +16,7 @@ gem 'turbo-rails'
 gem 'tzinfo-data'
 group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
+  gem 'factory_bot_rails'
   gem 'rails-controller-testing'
   gem 'rspec-rails'
 end
@@ -25,7 +26,9 @@ end
 
 group :test do
   gem 'capybara'
+  gem 'faker', git: 'https://github.com/stympy/faker.git', branch: 'master'
   gem 'ffi', '~> 1.15', '>= 1.15.5'
   gem 'selenium-webdriver'
+  gem 'shoulda-matchers'
   gem 'webdrivers'
 end

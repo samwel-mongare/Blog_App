@@ -2,14 +2,17 @@
     <li class="card mb-3 w-75" style="margin-top: -2rem" >
       <div class="col-md-12">
         <div class="card-body">
-            <% comment.each do |commenting| %>
-            <% user.each do |u| %>
-                <% if commenting.author_id === u.id && commenting.post_id === post.id  %> 
-                    <p class="card-text"><%= u.name %>: <%= commenting.text %></p> 
-                 <% end %>
-            <% end %>
-            <% end %> 
-        </div>
-      </div>
-    </li> 
+            <ul class="list-inline ml-5">
+      <% comment.includes(:author).each do |commenting| %>
+       <% if commenting.post_id === post.id  %> 
+        <li class="border-start border-4 border-warning px-2 shadow py-1 mb-2">
+          <h5><%= commenting.author.name %></h5>
+          <p><%= commenting.text %></p>
+        </li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+  </div>
+ </li> 
 </ul>

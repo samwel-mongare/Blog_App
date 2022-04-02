@@ -4,7 +4,7 @@ RSpec.describe 'Posts', type: :request do
   user = User.create(name: 'Sam', posts_counter: 0)
   post = user.posts.create(title: 'Post1', text: 'Howdy code reviewer', likes_counter: 0, comments_counter: 0)
   describe 'GET posts' do
-    before(:each) { get user_posts_path user_id: user.id  }
+    before(:each) { get user_posts_path user_id: user.id }
 
     it 'has a 200 success status code' do
       expect(response).to have_http_status(200)

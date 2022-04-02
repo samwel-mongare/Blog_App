@@ -62,6 +62,10 @@ then
 ```cmd
 rails db:migrate
 ```
+
+```cmd
+rails db:test:prepare
+```
 > thereafter run
 
 ```cmd

@@ -1,4 +1,3 @@
-<div>
  <h2  class="form-group w-25" style = "padding-left: 10%" >New Post<h2>
 
 <%= form_with model: @post, url: user_posts_path, scope: :post, html: {class: "post-form-c"} do |form| %>  
@@ -8,5 +7,4 @@
   <%= form.submit "Post", class: "btn btn-primary" %>
   </div>
 <% end %> 
-
 </div>

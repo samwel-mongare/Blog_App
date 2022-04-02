@@ -1,4 +1,5 @@
   <div>
+  <h3 class='hello_error'><%= flash[:success] %></h3>
 <% @comments = Comment.all %>
 <% @users = User.all %>
   <%= render 'post_show', :post => @post, :user => @users %>

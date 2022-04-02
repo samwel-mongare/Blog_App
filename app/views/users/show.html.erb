@@ -1,5 +1,5 @@
 <div>
-  <%= render 'share/user', :user => @user %>
+  <%= render 'user', :user => @user %>
   <ul class= "list-unstyled align-items-center d-flex flex-column align-items-center w-75">
     <li class="card mb-3 w-75 mt-4" >
       <div class="col-md-12">
@@ -9,14 +9,20 @@
       </div>
     </li>
 </ul>
-<% @posts = @user.latest_posts %>
-<% if !@posts %>
-  <h4 class="card-title">There are no posts from this user yet<h4>
-<% else %>
+
+<% @posts = @user.recent_posts %>
 <% @posts.each do |p| %>
 <% if p.author_id === @user.id %>
-  <%= render 'share/post', :post => p %>
+  <%= render 'posts/post', :post => p %>
 <% end %>
 <% end %>
-<% end %>
+</div>
+<div class = "d-flex flex-row mx-auto " style= "width: 320px; justify-content: space-between">
+      <%= link_to "See all posts", user_posts_path(@user.id), 
+      class: "list-group-item list-group-item-action list-group-item-success", 
+      style: "width: 150px;" %>
+      <%= link_to "New Post", new_user_post_path(@user.id), 
+      class: "list-group-item list-group-item-action list-group-item-success", 
+      style: "width: 150px;" %>
+</div>
 </div>

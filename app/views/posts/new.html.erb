@@ -1,0 +1,12 @@
+<div>
+ <h2  class="form-group w-25" style = "padding-left: 10%" >New Post<h2>
+
+<%= form_with model: @post, url: user_posts_path, scope: :post, html: {class: "post-form-c"} do |form| %>  
+      <div class="form-group w-25 p-5">
+  <%= form.text_field :title, placeholder: "Title", required: true, class: "form-control" %><br>
+      <%= form.text_area :text, placeholder: "Type here...", rows: 10, required: true,  class: "form-control" %>
+  <%= form.submit "Post", class: "btn btn-primary" %>
+  </div>
+<% end %> 
+
+</div>

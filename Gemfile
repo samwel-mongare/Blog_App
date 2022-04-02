@@ -25,6 +25,7 @@ end
 
 group :test do
   gem 'capybara'
+  gem 'ffi', '~> 1.15', '>= 1.15.5'
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end

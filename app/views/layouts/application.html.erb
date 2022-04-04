@@ -13,15 +13,9 @@
   <body class="d-flex flex-column min-vh-100">
     <%= render 'users/header' %>
 
-    <div class="d-flex justify-content-center">
-      <% if flash[:notice] %>
-        <div class="w-25 alert alert-warning alert-dismissible fade show" role="alert">
-          <strong>
-            <%= flash[:notice] %>
-          </strong>
-        </div>
-      <% end %>
-    </div>
+     <% flash.each do |name, message| %>
+    <div class="alert alert-<%= name %> mx-auto" style="width: 300px"><%= message %></div>
+  <% end %>
 
     <%= yield %>
     <%= render 'users/footer' %>

@@ -1,5 +1,7 @@
 <div>
 <% @users.each do |u| %>
-  <%= render 'user', :user => u %>
+   <%= link_to user_path(u.id), style:"text-decoration: none; color: black" do %> 
+      <%= render 'user', :user => u %>
+  <% end %>
 <% end %>
 </div>

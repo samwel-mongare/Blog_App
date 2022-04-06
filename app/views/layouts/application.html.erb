@@ -8,20 +8,15 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  </head>
+    </head>
 
-  <body class="d-flex flex-column min-vh-100">
+  <body class="d-flex flex-column min-vh-100" 
+  style= "background-image: linear-gradient(to right, #8360c3, #2ebf91); ">
     <%= render 'users/header' %>
 
-    <div class="d-flex justify-content-center">
-      <% if flash[:notice] %>
-        <div class="w-25 alert alert-warning alert-dismissible fade show" role="alert">
-          <strong>
-            <%= flash[:notice] %>
-          </strong>
-        </div>
-      <% end %>
-    </div>
+     <% flash.each do |name, message| %>
+    <div class="alert alert-<%= name %> mx-auto" style="width: 600px"><%= message %></div>
+  <% end %>
 
     <%= yield %>
     <%= render 'users/footer' %>

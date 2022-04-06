@@ -1,5 +1,17 @@
 <div>
+<% if user_signed_in? %>
 <% @users.each do |u| %>
-  <%= render 'user', :user => u %>
+      <%= render 'user', :user => u %>
+<% end %>
+<% else %>
+<div class = "w-50" style = "margin-left: 25%">
+<h1>Welcome to My Blog Application!</h1>
+<p>The Blog app will be a classic example of a blog website. You will 
+   create a fully functional website that will show
+   the list of posts and empower readers to interact with them by adding 
+   comments and liking posts.
+ </p>
+<%= link_to 'Sign in', new_user_session_path, style:"text-decoration: none; color: black", class: "btn btn-primary" %>
+</div>
 <% end %>
 </div>

@@ -1,8 +1,11 @@
-<ul class= "list-unstyled align-items-center d-flex flex-column align-items-center w-75">
+<ul class= "list-unstyled align-items-center d-flex flex-column align-items-center w-75"> 
     <li class="card mb-3 w-75 mt-4" >
+    <%= link_to user_path(user.id), style:"text-decoration: none; color: black" do %>
+      <div>
       <div class="row g-0">
       <div class="col-md-2">
-      <img src="<%= user.photo %>"  class="rounded float-start rounded border img-thumbnail" style="width: 150px" alt= "User Photo">
+      <img src="<%= user.photo %>"  class="rounded float-start rounded border img-thumbnail" 
+      style="width: 150px; height: 150px" alt= "User Photo">
       </div>
       <div class="col-md-10">
       <div class="card-body">
@@ -15,5 +18,7 @@
       </div>
       </div>
       </div>
+      </div>
     </li>
+    <% end %>
 </ul>

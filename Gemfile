@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.1.1'
 gem 'bootsnap', require: false
+gem 'devise', '~> 4.8', '>= 4.8.1'
 gem 'importmap-rails'
 gem 'jbuilder'
 gem 'pg', '~> 1.1'
@@ -13,7 +14,6 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 gem 'sprockets-rails'
 gem 'stimulus-rails'
 gem 'turbo-rails'
-gem 'devise', '~> 4.8', '>= 4.8.1'
 gem 'tzinfo-data'
 group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]

@@ -1,9 +1,7 @@
 <div>
 <% if user_signed_in? %>
 <% @users.each do |u| %>
-   <%= link_to user_path(u.id), style:"text-decoration: none; color: black" do %> 
       <%= render 'user', :user => u %>
-  <% end %>
 <% end %>
 <% else %>
 <div class = "w-50" style = "margin-left: 25%">

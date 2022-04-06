@@ -13,6 +13,7 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 gem 'sprockets-rails'
 gem 'stimulus-rails'
 gem 'turbo-rails'
+gem 'devise', '~> 4.8', '>= 4.8.1'
 gem 'tzinfo-data'
 group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]

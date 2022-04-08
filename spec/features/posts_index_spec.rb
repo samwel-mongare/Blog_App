@@ -66,5 +66,10 @@ RSpec.describe 'posts#index', type: :feature do
       post = Post.first
       expect(page).to have_content(post.likes_counter)
     end
+
+    it "redirects the user to the post's show page after clickin on it" do
+      click_link 'First Post'
+      expect(page).to have_current_path user_post_path(@post1.author_id, @post1)
+    end
   end
 end

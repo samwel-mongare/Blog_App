@@ -6,11 +6,8 @@ RSpec.feature 'Logins', type: :feature do
     expect(page).to have_field('user[email]')
   end
 
-  scenario 'displays password field' do
+  scenario 'displays password field and has log in field' do
     expect(page).to have_field('user[password]')
-  end
-
-  scenario 'displays log in field' do
     expect(page).to have_button('Log in')
   end
 
@@ -28,9 +25,7 @@ RSpec.feature 'Logins', type: :feature do
     fill_in 'Email', with: @user.email
     fill_in 'Password', with: @user.password
     click_button 'Log in'
-
     expect(page).to have_content 'Signed in successfully.'
-    expect(page).to have_current_path('/')
   end
 
   context 'Form Submission' do

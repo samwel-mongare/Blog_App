@@ -1,13 +1,14 @@
-
 require 'rails_helper'
 
 RSpec.describe 'Post show', type: :feature do
   describe 'Post' do
     before(:each) do
-      @first_user = User.create(name: 'Sam', photo: 'profile_pic.link', bio: 'bio', posts_counter: 0, email: 'Sam@gmail.com',
-                           password: 'password')
-      @second_user = User.create(name: 'Diana', bio: 'bio', photo: 'profile_pic.link', email: 'Diana@gmail.com', password: 'password')
-      @third_user = User.create(name: 'Tom', bio: 'bio', photo: 'profile_pic.link', email: 'Tom@gmail.com', password: 'password')
+      @first_user = User.create(name: 'Sam', photo: 'profile_pic.link', bio: 'bio', posts_counter: 0,
+                                email: 'Sam@gmail.com', password: 'password')
+      @second_user = User.create(name: 'Diana', bio: 'bio', photo: 'profile_pic.link', email: 'Diana@gmail.com',
+                                 password: 'password')
+      @third_user = User.create(name: 'Tom', bio: 'bio', photo: 'profile_pic.link', email: 'Tom@gmail.com',
+                                password: 'password')
 
       visit new_user_session_path
       fill_in 'Email', with: 'Diana@gmail.com'
@@ -23,7 +24,7 @@ RSpec.describe 'Post show', type: :feature do
       @post4 = Post.create(title: 'Fourth Post', text: 'This is my fourth post', comments_counter: 0, likes_counter: 0,
                            author: @first_user)
 
-      @comment1 = Comment.create(text: 'Hello Everyone!', author: User.first,post: Post.first)
+      @comment1 = Comment.create(text: 'Hello Everyone!', author: User.first, post: Post.first)
       @comment2 = Comment.create(text: 'Hello Sam!', author: User.first, post: Post.first)
       @comment3 = Comment.create(text: 'Helloo!', author: User.first, post: Post.first)
       visit user_post_path(@first_user, @post1)

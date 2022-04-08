@@ -3,10 +3,12 @@ require 'rails_helper'
 RSpec.describe 'user#Show', type: :feature do
   describe 'User' do
     before(:each) do
-      @first_user = User.create(name: 'Sam', photo: 'profile_pic.link', bio: 'bio', posts_counter: 0, email: 'Sam@gmail.com',
-      password: 'password')
-      @second_user = User.create(name: 'Diana', bio: 'bio', photo: 'profile_pic.link', email: 'Diana@gmail.com', password: 'password')
-      @third_user = User.create(name: 'Tom', bio: 'bio', photo: 'profile_pic.link', email: 'Tom@gmail.com', password: 'password')
+      @first_user = User.create(name: 'Sam', photo: 'profile_pic.link', bio: 'bio', posts_counter: 0,
+                                email: 'Sam@gmail.com', password: 'password')
+      @second_user = User.create(name: 'Diana', bio: 'bio', photo: 'profile_pic.link', email: 'Diana@gmail.com',
+                                 password: 'password')
+      @third_user = User.create(name: 'Tom', bio: 'bio', photo: 'profile_pic.link', email: 'Tom@gmail.com',
+                                password: 'password')
 
       visit new_user_session_path
       fill_in 'Email', with: 'Diana@gmail.com'

@@ -16,11 +16,11 @@ gem 'stimulus-rails'
 gem 'turbo-rails'
 gem 'tzinfo-data'
 group :development, :test do
+  gem 'database_cleaner'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'factory_bot_rails'
   gem 'rails-controller-testing'
   gem 'rspec-rails'
-  gem "database_cleaner"
 end
 group :development do
   gem 'web-console'

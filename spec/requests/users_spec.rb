@@ -13,7 +13,7 @@ RSpec.describe 'Users', type: :request do
     end
 
     it 'should test heading text displayed inside template' do
-      expect(response.body).to include('Blog APP')
+      expect(response.body).to include('Welcome to My Blog Application!')
     end
   end
 

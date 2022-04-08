@@ -18,7 +18,7 @@ RSpec.describe 'Users', type: :request do
   end
 
   describe 'GET show' do
-    user = User.create(name: 'Sam', posts_counter: 0)
+    user = User.create(name: 'Sam', posts_counter: 0, email: 'user@example.com', password: 'password')
     before(:each) { get user_path id: user.id }
 
     it 'Should be 200' do

@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Posts', type: :request do
-  user = User.create(name: 'Sam', posts_counter: 0)
+  user = User.create(name: 'Sam', posts_counter: 0, email: 'user@example.com', password: 'password')
   post = user.posts.create(title: 'Post1', text: 'Howdy code reviewer', likes_counter: 0, comments_counter: 0)
   describe 'GET posts' do
     before(:each) { get user_posts_path user_id: user.id }

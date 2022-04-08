@@ -18,7 +18,7 @@ RSpec.describe Post, type: :model do
   end
 
   it 'updates a posts comments correctly' do
-    user = User.create(name: 'Sam', posts_counter: 0)
+    user = User.create(name: 'Sam', posts_counter: 0, email: 'user@example.com', password: 'password')
     post = user.posts.create(title: 'Post1', text: 'Howdy code reviewer', likes_counter: 0, comments_counter: 0)
     post.comments.create(author_id: user.id, post_id: post.id, text: 'Hi Tom!')
     expect(post.comments_counter).to eql(1)

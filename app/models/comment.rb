@@ -4,7 +4,6 @@ class Comment < ApplicationRecord
   after_save :update_comments_counter
 
   validates :text, presence: true
-  validates_presence_of :name
 
   private
 

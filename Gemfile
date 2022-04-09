@@ -15,6 +15,9 @@ gem 'sprockets-rails'
 gem 'stimulus-rails'
 gem 'turbo-rails'
 gem 'tzinfo-data'
+gem 'active_model_serializers', '~> 0.10.0'
+gem 'bcrypt', '~> 3.1.7'
+
 group :development, :test do
   gem 'database_cleaner'
   gem 'debug', platforms: %i[mri mingw x64_mingw]

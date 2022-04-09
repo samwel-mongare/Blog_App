@@ -1,7 +1,10 @@
 class ApplicationController < ActionController::Base
   add_flash_types :success, :danger, :info, :warning
 
-  protect_from_forgery with: :exception
+  # Used when not using api calls
+  # protect_from_forgery with: :exception
+
+  protect_from_forgery prepend: true
 
   before_action :update_allowed_parameters, if: :devise_controller?
 

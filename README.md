@@ -12,6 +12,9 @@ Additional description about the project and its features.
 
 - RUBY on RAILS
 - PostgreSQL
+- Bootstrap
+- Devise
+- RSPEC
 
 ## How to Setup
 
@@ -70,6 +73,30 @@ rails db:test:prepare
 
 ```cmd
 .rails s
+```
+
+## API Manipulation and Endpoints
+
+```Sign Up/Create User
+ /api/v1/users/sign_up
+```
+
+```Sign In/ Generate User Token
+ /api/v1/users/sign_in
+```
+```Create posts
+ /api/v1/users/posts/create
+```
+```Load Posts
+ /api/v1/posts
+```
+
+```Create Comments
+ /api/v1/users/comments/create
+```
+
+```Load Comments
+ /api/v1/comments
 ```
 
 ## Author

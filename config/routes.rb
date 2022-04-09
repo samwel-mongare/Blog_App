@@ -10,4 +10,14 @@ Rails.application.routes.draw do
       end 
   end  
   root 'users#index'
+
+  namespace :api , defaults: { format: :json } do
+    namespace :v1 do
+      post 'users/sign_up' => 'users#register'
+      post 'users/sign_in' => 'users#login'
+      get 'posts' => 'posts#index'
+      get 'comments' => 'comments#index'
+      post 'comments/create' => 'comments#create'
+    end
+  end
 end
